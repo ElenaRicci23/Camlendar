@@ -23,11 +23,11 @@ Per eseguire il progetto, segui queste istruzioni:
 
 2. Vai alla cartella del backend (`djangoProject`) tramite il terminale.
 
-3. Esegui il comando per installare i requisiti Django:
+3. Esegui il comando per installare i requisiti Django: pip install -r requirements.txt
 
-4. Applica le migrazioni del database:
+4. Applica le migrazioni del database: python manage.py migrate
 
-5. Avvia il server Django:
+5. Avvia il server Django: python manage.py runserver
 
 ### Frontend (Angular)
 
@@ -35,9 +35,9 @@ Per eseguire il progetto, segui queste istruzioni:
 
 2. Vai alla cartella del frontend (`angular`) tramite il terminale.
 
-3. Esegui il comando per installare le dipendenze Angular:
+3. Esegui il comando per installare le dipendenze Angular: npm install
 
-4. Avvia l'app Angular:
+4. Avvia l'app Angular: ng serve
 
 L'applicazione sarà ora accessibile all'indirizzo http://localhost:4200/ nel tuo browser.
 
