@@ -17,10 +17,6 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',  # Fallback to default ModelBackend
 ]
 
-ADMINS = [
-    ('Admin', 'elena.ricci@studenti.unicam.it'),
-]
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -105,11 +101,11 @@ WSGI_APPLICATION = 'djangoProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'student_db',
-        'USER': 'root',
-        'PASSWORD': 'Im7omyW%8!AND',
-        'HOST': 'localhost',
+        'NAME': 'student_db02',
+        'USER': 'root_user02',
+        'PASSWORD': '27tB6h_LmkQxMUP',
         'PORT': '3306',
+        'HOST': 'db4free.net',
     }
 }
 
