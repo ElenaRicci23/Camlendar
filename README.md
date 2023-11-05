@@ -64,4 +64,4 @@ Distribuito con licenza MIT.
 
 ## Contatti
 
-Per domande, contatta info@universita.it.
+Per domande, contatta nessuno@universita.it.
