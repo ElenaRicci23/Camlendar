@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Lista Professori</h1>
+    <select [(ngModel)]="selectedYear" (change)="onYearChange()">
+    <option value="tutti">Tutti</option>
+    <option value="1">Anno 1</option>
+    <option value="2">Anno 2</option>
+    <option value="3">Anno 3</option>
+  </select>
+  <ul>
+    <li *ngFor="let docente of docenti">
+      {{ docente.nome }} {{ docente.cognome }} - {{ docente.email }}
+    </li>
+  </ul>
+</div>

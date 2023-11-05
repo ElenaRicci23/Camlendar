@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Lista degli Esami</h1>
+
+  <!-- Mostra la lista degli esami -->
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let esame of esami">
+      <h3 (click)="esame.inEditMode = !esame.inEditMode">{{ esame.nome }}</h3> <!-- clicca sul nome per mostrare/nascondere il form -->
+      <p><strong>Crediti:</strong> {{ esame.crediti }}</p>
+      <p><strong>Voto:</strong> {{ esame.voto }}</p>
+      <p><strong>Data Esame:</strong> {{ esame.data_esame }}</p>
+
+      <!-- Mostra il form per la modifica quando inEditMode è true -->
+     <div *ngIf="esame.inEditMode">
+  <form (ngSubmit)="editEsame(esame)">
+    <div class="form-group">
+      <label for="voto">Voto:</label>
+      <input type="number" id="voto" [(ngModel)]="esame.voto" name="voto" class="form-control" min="18" max="30.50" step="0.01" required>
+    </div>
+    <div class="form-group">
+      <label for="dataEsame">Data Esame:</label>
+      <input type="date" id="dataEsame" [(ngModel)]="esame.data_esame" name="dataEsame" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Aggiorna</button>
+  </form>
+</div>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,15 @@
+<!-- src/app/corso/corso.component.html -->
+
+<div class="container">
+  <h1>Lista Corsi</h1>
+  <ul class="corso-list">
+    <li *ngFor="let corso of corsi" class="corso-item">
+      <div class="corso-info">
+        <h2>{{ corso.nome }}</h2>
+        <p><strong>Docente:</strong> {{ corso.docente.nome }} {{ corso.docente.cognome }}</p>
+        <p><strong>Anno:</strong> {{ corso.anno }}</p>
+        <p><strong>Crediti:</strong> {{ corso.crediti }}</p>
+      </div>
+    </li>
+  </ul>
+</div>

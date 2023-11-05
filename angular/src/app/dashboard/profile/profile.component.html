@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profilo Utente</title>
+  <link rel="stylesheet" href="profile.component.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="profile-container" *ngIf="profile">
+      <img src="assets/avatar.ico" alt="Avatar studente" class="avatar"> <!-- Aggiorna con il percorso corretto dell'avatar -->
+      <div class="student-info">
+        <h2 class="student-name">{{ profile.nome }} {{ profile.cognome }}</h2>
+        <p class="student-detail"><strong>Email:</strong> {{ profile.email }}</p>
+        <p class="student-detail"><strong>Anno Accademico:</strong> {{ profile.anno_accademico }}</p>
+      </div>
+      <div class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Nome Corso</th>
+              <th>Docente</th>
+              <th>Email Docente</th>
+              <th>Crediti</th>
+              <th>Semestre</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let corso of profile.corsi">
+              <td>{{ corso.nome }}</td>
+              <td>{{ corso.docente.nome }} {{ corso.docente.cognome }}</td>
+              <td>{{ corso.docente.email }}</td>
+              <td>{{ corso.crediti }}</td>
+              <td>{{ corso.semestre }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

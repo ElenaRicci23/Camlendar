@@ -1,0 +1,32 @@
+<h1>A.A. 2023-2024</h1>
+<!-- Filtraggio per Anno -->
+<button (click)="filterYear(1)">1° Anno</button>
+<button (click)="filterYear(2)">2° Anno</button>
+<button (click)="filterYear(3)">3° Anno</button>
+
+<!-- Navigazione e Vista del Calendario -->
+<button (click)="setView(CalendarView.Day)">Giorno</button>
+<button (click)="setView(CalendarView.Week)">Settimana</button>
+<button (click)="setView(CalendarView.Month)">Mese</button>
+<button (click)="navigate('prev')">Precedente</button>
+<button (click)="navigate('next')">Successivo</button>
+
+<mwl-calendar-day-view
+  *ngIf="view === CalendarView.Day"
+  [viewDate]="viewDate"
+  [events]="events"
+  [dayStartHour]="6">
+</mwl-calendar-day-view>
+
+<mwl-calendar-week-view
+  *ngIf="view === CalendarView.Week"
+  [viewDate]="viewDate"
+  [events]="events"
+  [dayStartHour]="6">
+</mwl-calendar-week-view>
+
+<mwl-calendar-month-view
+  *ngIf="view === CalendarView.Month"
+  [viewDate]="viewDate"
+  [events]="events">
+</mwl-calendar-month-view>

@@ -1,0 +1,71 @@
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="login-register.component.css">
+    <title>Accedi</title>
+</head>
+
+<body>
+<div class="container" [class.active]="active" id="container">
+  <div class="form-container sign-up">
+            <form>
+                <h1>Crea un Account</h1>
+                <span>Inserisci la tua email per registrarti</span>
+
+             <input type="text" [(ngModel)]="newStudent.nome" placeholder="Nome" name="nome">
+              <input type="text" [(ngModel)]="newStudent.cognome" placeholder="Cognome" name="cognome">
+              <input type="email" [(ngModel)]="newStudent.email" placeholder="Email" name="email">
+
+                <select [(ngModel)]="newStudent.anno_accademico" name="anno_accademico" class="custom-select">
+                    <option value="" disabled selected>Seleziona Anno Frequentato</option>
+                    <option value="1">1° ANNO</option>
+                    <option value="2">2° ANNO</option>
+                    <option value="3">3° ANNO</option>
+                    <option value="F">FUORICORSO</option>
+                </select>
+
+                <select [(ngModel)]="newStudent.gender"  name="gender" class="custom-select">
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                    <option value="U">Unicorn</option>
+                </select>
+
+                <input type="password" [(ngModel)]="newStudent.password" placeholder="Password" name="password">
+
+              <button (click)="register()">Registrati</button>
+            </form>
+        </div>
+    <div *ngIf="isLoading" class="spinner-container">
+  <div class="spinner"></div>
+</div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Accedi</h1>
+                <span>Inserisci la tua email e password</span>
+                <input type="email" [(ngModel)]="loginStudent.email" placeholder="Email" name="email">
+                <input type="password" [(ngModel)]="loginStudent.password" placeholder="Password" name="password">
+                <a href="#">Hai dimenticato la Password?</a>
+                <button (click)="login()">Accedi</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Bentornato/a!</h1>
+                    <p>Inserisci i tuoi dati personali per utilizzare tutte le funzionalità del sito</p>
+                    <button class="hidden" (click)="loginMovimento()">Accedi</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Ciao, Amico/a!</h1>
+                    <p>Registrati con i tuoi dati personali per utilizzare tutte le funzionalità del sito</p>
+                    <button class="hidden" (click)="registerMovimento()">Registrati</button>
+                </div>
+            </div>
+        </div>
+</div>
+</body>
+</html>

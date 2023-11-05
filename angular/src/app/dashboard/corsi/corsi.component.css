@@ -1,0 +1,45 @@
+/* src/app/corso/corso.component.css */
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.corso-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.corso-item {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.corso-info {
+  flex-grow: 1;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Stili aggiuntivi per personalizzare ulteriormente il design */

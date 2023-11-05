@@ -1,0 +1,43 @@
+/* Stile per il contenitore principale dei collegamenti di navigazione */
+.nav-items {
+  display: flex;
+  flex-direction: column;
+  gap: 7px; /* Aumenta la spaziatura tra i collegamenti */
+  padding-top: 20px;
+  margin-left: 20px;
+}
+
+/* Stile per ogni singolo collegamento di navigazione */
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 15px; /* Aumenta il padding per un aspetto più spazioso */
+  border-radius: 8px; /* Bordo arrotondato per i collegamenti */
+  transition: background-color 0.3s ease;
+  font-size: 18px; /* Aumenta la dimensione del carattere */
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #ffffff; /* Colore del testo normale */
+  transition: color 0.3s ease;
+  font-weight: bold; /* Rendi il testo in grassetto */
+}
+
+/* Stile per lo stato hover */
+.nav-item:hover {
+  color: #000; /* Cambia colore del testo al passaggio del mouse */
+}
+
+.nav-item:hover a {
+  color: #007bff; /* Cambia colore del testo al passaggio del mouse */
+}
+
+/* Stile per il collegamento selezionato */
+.nav-item.active {
+ background-color: #6f9cc5; /* Colore di sfondo per il collegamento attivo */
+}
+
+.nav-item.active a {
+  color: #fff; /* Colore del testo per il collegamento attivo */
+}
