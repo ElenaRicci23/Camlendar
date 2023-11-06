@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Student } from "../../model/student";
 import { AuthService } from "../../service/auth.service";
 import { SanitizationService } from "../../sanitization/sanitization.service";
+import { ToastrService } from 'ngx-toastr';
 
 /**
  * Componente per la gestione della registrazione e dell'accesso degli studenti.
@@ -17,17 +18,21 @@ export class LoginRegisterComponent {
   newStudent: Student = new Student();
   loginStudent = { email: '', password: '' };
   isLoading: boolean = false;
+  messages: string[] = [];
+
 
   /**
    * Costruttore del componente.
    * @param authService Servizio per l'autenticazione degli studenti.
    * @param router Servizio di navigazione per reindirizzare gli utenti.
    * @param sanitizationService Servizio per la sanitizzazione dei dati.
+   * @param toastr Servizio per mostrare messaggi di notifica.
    */
   constructor(
     private authService: AuthService,
     private router: Router,
-    private sanitizationService: SanitizationService
+    private sanitizationService: SanitizationService,
+    private toastr: ToastrService
   ) {}
 
   /**
@@ -42,32 +47,37 @@ login() {
       localStorage.setItem('token', res.access);
       localStorage.setItem('refresh', res.refresh);
       this.router.navigate(['/dashboard']);
-      console.log('Accesso riuscito con successo');
+      this.messages.push('Accesso riuscito con successo');
+      this.toastr.success('Accesso riuscito con successo', 'Successo');
     },
-    (err: string | undefined) => console.log(err)
+    (err: string | undefined) => {
+      console.log(err);
+      this.messages.push('Errore durante l\'accesso');
+      this.toastr.error('Errore durante l\'accesso', 'Errore');
+    }
   );
 }
 
-/**
- * Registra un nuovo studente.
- */
-register() {
+  /**
+   * Registra un nuovo studente.
+   */
+  register() {
   this.active = false;
 
-if (
-  this.sanitizationService.isValidString(this.newStudent.nome) &&
-  this.sanitizationService.isValidString(this.newStudent.cognome) &&
-  this.sanitizationService.isValidString(this.newStudent.email) &&
-  this.newStudent.anno_accademico !== undefined && // Aggiunto controllo di undefined
-  this.sanitizationService.isValidString(this.newStudent.anno_accademico.toString()) && // Assicurati che sia una stringa
-  this.sanitizationService.isValidString(this.newStudent.gender) &&
-  this.newStudent.password !== undefined && // Aggiunto controllo di undefined
-  this.sanitizationService.isValidString(this.newStudent.password.toString()) // Assicurati che sia una stringa
-) {
-     const studentData: Student = {
+  if (
+    this.sanitizationService.isValidString(this.newStudent.nome) &&
+    this.sanitizationService.isValidString(this.newStudent.cognome) &&
+    this.sanitizationService.isValidString(this.newStudent.email) &&
+    this.newStudent.anno_accademico !== undefined &&
+    this.sanitizationService.isValidString(this.newStudent.anno_accademico.toString()) &&
+    this.sanitizationService.isValidString(this.newStudent.gender) &&
+    this.newStudent.password !== undefined &&
+    this.sanitizationService.isValidString(this.newStudent.password.toString())
+  ) {
+    const studentData: Student = {
       nome: this.newStudent.nome,
       cognome: this.newStudent.cognome,
-      email: this.newStudent.email.toLowerCase(), // Converti l'email in minuscolo
+      email: this.newStudent.email.toLowerCase(),
       anno_accademico: this.newStudent.anno_accademico,
       gender: this.newStudent.gender,
       password: this.newStudent.password,
@@ -75,18 +85,22 @@ if (
 
     this.authService.registerUser(studentData).subscribe(
       (res) => {
-        console.log('Risposta:', res);  // Controlla la risposta del server
+        console.log('Risposta:', res);
+        this.messages.push('Registrazione riuscita!');
+        this.toastr.success('Registrazione riuscita!', 'Successo');
       },
       (err) => {
-        console.error('Errore:', err);  // Controlla l'errore del server
+        console.error('Errore:', err);
+        this.messages.push('Errore durante la registrazione');
+        this.toastr.error('Errore durante la registrazione', 'Errore');
       }
     );
   } else {
     console.error('Dati di registrazione non validi.');
+    this.messages.push('Dati di registrazione non validi');
+    this.toastr.error('Dati di registrazione non validi', 'Errore');
   }
 }
-
-
 
   /**
    * Abilita la vista di registrazione.

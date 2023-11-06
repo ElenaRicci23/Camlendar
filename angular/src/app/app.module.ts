@@ -21,6 +21,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {CalendarModule} from "angular-calendar";
 import {TokenInterceptorService} from "./token/token-interceptor.service";
 import {AuthGuard} from "./guard/auth.guard";
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -50,6 +51,8 @@ import {AuthGuard} from "./guard/auth.guard";
     BrowserAnimationsModule,
     ReactiveFormsModule,
     CalendarModule,
+        ToastrModule.forRoot(),
+
 
   ],
 

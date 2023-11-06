@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="login-register.component.css">
     <title>Accedi</title>
 </head>
-
+ <div *ngFor="let message of messages" class="alert alert-info">
+                 {{ message }}
+               </div>
 <body>
 <div class="container" [class.active]="active" id="container">
   <div class="form-container sign-up">
@@ -38,6 +40,7 @@
               <button (click)="register()">Registrati</button>
             </form>
         </div>
+
     <div *ngIf="isLoading" class="spinner-container">
   <div class="spinner"></div>
 </div>
@@ -65,6 +68,7 @@
                 </div>
             </div>
         </div>
+
 </div>
 </body>
 </html>
