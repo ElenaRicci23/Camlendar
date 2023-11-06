@@ -29,10 +29,10 @@ export class SanitizationService {
    * @param input Stringa da sanificare.
    * @returns Stringa sanificata senza caratteri speciali.
    */
-  sanitizeInput(input: string): string {
-    // Rimuovi i caratteri speciali utilizzando una regex
-    return input.replace(/[^a-zA-Z0-9\s]/g, '');
-  }
+ sanitizeInput(input: string): string {
+  return input.replace(/[^a-zA-Z0-9@\s.]/g, '');
+}
+
 
   /**
    * Esegue una semplice validazione per verificare se una stringa è vuota o null.

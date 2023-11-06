@@ -27,7 +27,6 @@ export class SchedulerComponent implements OnInit {
       this.apiService.getLezioni().subscribe(data => {
         if (data && Array.isArray(data)) {
           this.events = this.createRecurringEvents(data, 12); // 12 weeks of repetition
-          console.log('Mapped events:', this.events);
         }
       });
     }

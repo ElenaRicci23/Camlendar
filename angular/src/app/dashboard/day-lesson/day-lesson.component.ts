@@ -26,10 +26,8 @@ export class DayLessonComponent implements OnInit {
         const userEmail = profile.email; // Ottieni l'email dall'oggetto di profilo
         if (userEmail) {
           this.apiService.getLezioniByStudentYear(userEmail).subscribe(data => {
-            console.log('Raw API data:', data);
             if (data && Array.isArray(data)) {
               this.events = this.createEventsForDay(data); // Eventi solo per un giorno
-              console.log('Mapped events:', this.events);
             }
           });
         }
