@@ -32,10 +32,7 @@ export class SanitizationService {
  sanitizeInput(input: string): string {
   return input.replace(/[^a-zA-Z0-9@\s.]/g, '');
 }
-sanitizeForPassword(input: string): string {
-    // Consenti caratteri speciali sicuri per le password
-    return input.replace(/[^a-zA-Z0-9\s.!@#$%^&*()_+-=<>?{}|:";',\[\]\\/`~]/g, '');
-  }
+
 
 
   /**

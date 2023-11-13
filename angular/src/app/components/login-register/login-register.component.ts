@@ -60,13 +60,12 @@ login() {
     return;
   }
 
-  // Crea un oggetto con le credenziali per il login
+  // oggetto con le credenziali per il login
   const credentials = {
     email: email, // L'email già validata
     password: password // La password così com'è, perché le password non dovrebbero contenere script HTML
   };
 
-  // Procedi con il login usando le credenziali
   this.authService.loginUser(credentials).subscribe(
     (res: { access: string; refresh: string }) => {
       localStorage.setItem('token', res.access);
