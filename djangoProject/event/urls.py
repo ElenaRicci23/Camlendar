@@ -13,6 +13,6 @@ urlpatterns = [
     path('lezioni/<str:email>/', views.lezioni_per_utente_api, name='lezioni_per_utente_api'),
     path('esami/<str:email>/',views.esami_per_utente_api,name='esami_per_utente_api'),
     path('esami/<str:email>/<int:id_esame>/aggiorna-voto/', aggiorna_voto_esame, name='aggiorna_voto_esame'),
-    path('/esame/<str:email>/modifica-voto/', modifica_voto_esame, name='modifica_voto_esame'),
+    path('esame/<str:email>/modifica-voto/', modifica_voto_esame, name='modifica_voto_esame'),
     path('docenti-per-anno/<str:anno>/', views.docenti_per_anno_api, name='docenti-per-anno'),
 ]

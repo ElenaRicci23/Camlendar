@@ -49,8 +49,7 @@
                 <h1>Accedi</h1>
                 <span>Inserisci la tua email e password</span>
                 <input type="email" [(ngModel)]="loginStudent.email" placeholder="Email" name="email">
-                <input type="password" [(ngModel)]="loginStudent.password" placeholder="Password" name="password">
-                <a href="#">Hai dimenticato la Password?</a>
+                <input type="password" [(ngModel)]="loginStudent.password" placeholder="Password" name="password" autocomplete="current-password" class="ng-valid ng-dirty ng-touched">
                 <button (click)="login()">Accedi</button>
             </form>
         </div>

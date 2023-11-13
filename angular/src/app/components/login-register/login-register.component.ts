@@ -42,7 +42,32 @@ login() {
   this.active = true;
   this.isLoading = true;
 
-  this.authService.loginUser(this.loginStudent).subscribe(
+    const email = this.loginStudent.email;
+
+  const password = this.loginStudent.password;
+
+  // Utilizza la validazione specifica per l'email
+  if (!this.sanitizationService.isValidEmail(email)) {
+    this.toastr.error('Email non valida.', 'Errore');
+    this.isLoading = false;
+    return;
+  }
+
+  // Controlla che la password non sia vuota o null
+  if (!this.sanitizationService.isValidString(password)) {
+    this.toastr.error('Password non valida.', 'Errore');
+    this.isLoading = false;
+    return;
+  }
+
+  // Crea un oggetto con le credenziali per il login
+  const credentials = {
+    email: email, // L'email già validata
+    password: password // La password così com'è, perché le password non dovrebbero contenere script HTML
+  };
+
+  // Procedi con il login usando le credenziali
+  this.authService.loginUser(credentials).subscribe(
     (res: { access: string; refresh: string }) => {
       localStorage.setItem('token', res.access);
       localStorage.setItem('refresh', res.refresh);
@@ -57,6 +82,8 @@ login() {
     }
   );
 }
+
+
 
   /**
    * Registra un nuovo studente.
