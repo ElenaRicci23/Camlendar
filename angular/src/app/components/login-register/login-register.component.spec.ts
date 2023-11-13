@@ -46,7 +46,6 @@ describe('LoginRegisterComponent', () => {
     expect(sanitizationService.isValidString(sanitizedEmail)).toBeFalse();
     expect(sanitizationService.isValidString(sanitizedPassword)).toBeFalse();
 
-    // La funzione loginUser non deve essere chiamata se le credenziali non sono valide
-    // Questo test si aspetta che l'autenticazione non proceda con credenziali non valide
+
   });
 });
