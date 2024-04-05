@@ -1,0 +1,23 @@
+
+
+
+
+INSERT INTO event_docente (nome, cognome, email, link, dipartimento) VALUES 
+('Luca', 'Padovani', 'luca.padovani@unicam.it', 'https://unicam.webex.com/wbxmjs/joinservice/sites/', 'Informatica'),
+('Leonardo', 'Mostarda', 'leonardo.mostarda@unicam.it', 'https://unicam.webex.com/meet/leonardo.mostarda', 'Informatica'),
+('Rosario', 'Culmone', 'rosario.culmone@unicam.it', 'https://unicam.webex.com/meet/rosario.culmone', 'Informatica'),
+('Sonia', 'L''Innocente', 'sonia.linnocente@unicam.it', 'https://unicam.webex.com/meet/sonia.linnocente', 'Informatica'),
+('Alessandrappliedappliedo', 'Della Corte', 'alessandro.dellacorte@unicam.it', 'https://unicam.webex.com/meet/alessandro.dellacorte', 'Informatica'),
+('Diletta', 'Cacciagrano', 'diletta.cacciagrano@unicam.it', 'https://unicam.webex.com/meet/diletta.cacciagrano', 'Informatica'),
+('Flavio', 'Corradini', 'flavio.corradini@unicam.it', 'https://unicam.webex.com/meet/flavio.corradini', 'Informatica'),
+('Simonetta', 'Bernabei', 'simonetta.bernabei@unicam.it', 'https://unicam.webex.com/meet/simonetta.bernabei', 'Informatica'),
+('Grid', 'Thoma', 'grid.thoma@unicam.it', 'https://unicam.webex.com/meet/grid.thoma', 'Informatica'),
+('Emanuela', 'Merelli', 'emanuela.merelli@unicam.it', 'https://unicam.webex.com/meet/emanuela.merelli', 'Informatica'),
+('Luca', 'Tesei', 'luca.tesei@unicam.it', 'https://unicam.webex.com/meet/luca.tesei', 'Informatica'),
+('Fausto', 'Marcantoni', 'fausto.marcantoni@unicam.it', 'https://unicam.webex.com/meet/fausto.marcantoni', 'Informatica'),
+('Barbara', 'Re', 'barbara.re@unicam.it', 'https://unicam.webex.com/meet/barbara.re', 'Informatica'),
+('Michele', 'Loreti', 'michele.loreti@unicam.it', 'https://unicam.webex.com/meet/michele.loreti', 'Informatica'),
+('Renato', 'De Leone', 'renato.deleone@unicam.it', 'https://unicam.webex.com/meet/renato.deleone', 'Informatica'),
+('Andrea', 'Polini', 'andrea.polini@unicam.it', 'https://unicam.webex.com/meet/andrea.polini', 'Informatica'),
+('Patrizia', 'Giampieri', 'patrizia.giampieri@unicam.it', 'https://unicam.webex.com/meet/patrizia.giampieri', 'Informatica'),
+('Topo', 'Gigio', 'topo.gigio@unicam.it', 'https://unicam.webex.com/meet/topo.gigio', 'Informatica');

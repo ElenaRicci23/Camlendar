@@ -1,0 +1,91 @@
+asgiref                       3.7.2
+Django                        4.2.6
+django-cors-headers           4.2.0
+django-storages               1.14.1
+djangorestframework           3.14.0
+djangorestframework-simplejwt 5.3.0
+mysqlclient                   2.2.0
+pip                           23.2.1
+PyJWT                         2.8.0
+PyMySQL                       1.1.0
+pytz                          2023.3.post1
+setuptools                    65.5.0
+sqlparse                      0.4.4
+typing_extensions             4.8.0
+tzdata                        2023.3
+
+pip install asgiref
+pip install Django
+pip install django-cors-headers
+pip install django-storages
+pip install djangorestframework
+pip install djangorestframework-simplejwt
+pip install mysqlclient
+pip install pip
+pip install PyJWT
+pip install PyMySQL
+pip install pytz
+pip install setuptools
+pip install sqlparse
+pip install typing_extensions
+pip install tzdata
+
+
+
+Lista di npm 
+
++-- @angular-devkit/build-angular@16.2.5
++-- @angular/animations@16.2.8
++-- @angular/cdk@16.2.7
++-- @angular/cli@16.2.5
++-- @angular/common@16.2.8
++-- @angular/compiler-cli@16.2.8
++-- @angular/compiler@16.2.8
++-- @angular/core@16.2.8
++-- @angular/forms@16.2.8
++-- @angular/platform-browser-dynamic@16.2.8
++-- @angular/platform-browser@16.2.8
++-- @angular/router@16.2.8
++-- @types/jasmine@4.3.6
++-- angular-calendar-scheduler@16.0.0
++-- angular-calendar@0.31.0
++-- bootstrap@5.3.2
++-- date-fns@2.30.0
++-- jasmine-core@4.6.0
++-- karma-chrome-launcher@3.2.0
++-- karma-coverage@2.2.1
++-- karma-jasmine-html-reporter@2.1.0
++-- karma-jasmine@5.1.0
++-- karma@6.4.2
++-- rxjs@7.8.1
++-- tslib@2.6.2
++-- typescript@5.1.6
+`-- zone.js@0.13.3
+
+npm install @angular-devkit/build-angular
+npm install @angular/animations
+npm install @angular/cdk
+npm install @angular/cli
+npm install @angular/common
+npm install @angular/compiler-cli
+npm install @angular/compiler
+npm install @angular/core
+npm install @angular/forms
+npm install @angular/platform-browser-dynamic
+npm install @angular/platform-browser
+npm install @angular/router
+npm install @types/jasmine
+npm install angular-calendar-scheduler
+npm install angular-calendar
+npm install bootstrap
+npm install date-fns
+npm install jasmine-core
+npm install karma-chrome-launcher
+npm install karma-coverage
+npm install karma-jasmine-html-reporter
+npm install karma-jasmine
+npm install karma
+npm install rxjs
+npm install tslib
+npm install typescript
+npm install zone.js

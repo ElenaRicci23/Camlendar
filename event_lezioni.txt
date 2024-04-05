@@ -1,0 +1,36 @@
+INSERT INTO `event_lezione` (giorno_settimana, orario_inizio, orario_fine, aula, corso_id, docente_id) 
+VALUES 
+-- lunedì 2 ottobre 2023
+('L', '11:00:00', '13:00:00', 'Edificio B - Aula B1', 5, 4),
+('L', '14:00:00', '16:00:00', 'Edificio B - Aula B1', 1, 1),
+('L', '16:00:00', '18:00:00', 'Edificio B - Aula B1', 1, 1),
+-- martedì 3 ottobre 2023
+('M', '11:00:00', '13:00:00', 'Edificio B - Aula B1', 1, 3),
+('M', '14:00:00', '16:00:00', 'Edificio B - Aula B1', 1, 1),
+('M', '16:00:00', '18:00:00', 'Edificio B - Aula B1', 1, 2),
+-- mercoledì 4 ottobre 2023
+('ME', '09:00:00', '11:00:00', 'Edificio B - Aula B1', 6, 5),
+('ME', '11:00:00', '13:00:00', 'Edificio B - Aula B1', 1, 2),
+('ME', '14:00:00', '16:00:00', 'Edificio A - Aula Aa1', 4, 17),
+-- giovedì 5 ottobre 2023
+('G', '09:00:00', '11:00:00', 'Edificio B - Aula B1', 5, 4),
+('G', '11:00:00', '13:00:00', 'Edificio B - Aula B1', 6, 5),
+-- venerdì 6 ottobre 2023
+('V', '11:00:00', '13:00:00', 'Edificio B - Aula B1', 1, 3),
+('V', '14:00:00', '16:00:00', 'Edificio A - Aula Aa1', 4, 17);
+
+INSERT INTO `Lezione` (giorno_settimana, orario_inizio, orario_fine, aula, corso_id, docente_id) 
+VALUES 
+-- lunedì 2 ottobre 2023
+('L', '16:00:00', '18:00:00', 'Polo Carla Lodovici Edificio A - Aula Aa1', 11, 6),
+-- martedì 3 ottobre 2023
+('M', '09:00:00', '11:00:00', 'Polo Carla Lodovici Edificio B - Aula B1', 16, 12),
+('M', '11:00:00', '13:00:00', 'Polo Carla Lodovici Edificio A - Aula Aa1', 12, 10),
+('M', '14:00:00', '16:00:00', 'Polo Carla Lodovici Edificio A - Aula Aa1', 11, 6),
+-- mercoledì 4 ottobre 2023
+('ME', '14:00:00', '17:00:00', 'Polo Carla Lodovici Edificio B - Aula B1', 16, 12),
+-- giovedì 5 ottobre 2023
+('G', '11:00:00', '13:00:00', 'Polo Carla Lodovici Edificio A - Aula Aa1', 12, 10),
+('G', '14:00:00', '17:00:00', 'Polo Carla Lodovici Edificio B - Aula B1', 16, 12),
+-- venerdì 6 ottobre 2023
+('V', '10:00:00', '13:00:00', 'Polo Carla Lodovici Edificio A - Aula Aa1', 13, 11);
